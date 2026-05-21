@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Digitalisasi Pembelajaran Statistika SMA</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#eef6ff;
+color:#1d3557;
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(255,255,255,0.95);
+backdrop-filter:blur(10px);
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 2px 15px rgba(0,0,0,0.05);
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+color:#4a90e2;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:#1d3557;
+font-weight:500;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:#4a90e2;
+}
+
+/* HERO */
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:80px 8%;
+background:linear-gradient(to bottom,#dfefff,#eef6ff);
+position:relative;
+overflow:hidden;
+}
+
+.circle1{
+position:absolute;
+width:500px;
+height:500px;
+background:#cfe4ff;
+border-radius:50%;
+top:-180px;
+right:-120px;
+opacity:0.5;
+}
+
+.circle2{
+position:absolute;
+width:300px;
+height:300px;
+background:#b7d8ff;
+border-radius:50%;
+bottom:-100px;
+left:-100px;
+opacity:0.4;
+}
+
+.hero-content{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:60px;
+flex-wrap:wrap;
+z-index:2;
+}
+
+.hero-text{
+flex:1;
+min-width:300px;
+}
+
+.hero-text h1{
+font-size:58px;
+line-height:1.2;
+margin-bottom:20px;
+}
+
+.hero-text span{
+color:#4a90e2;
+}
+
+.hero-text p{
+font-size:18px;
+line-height:1.9;
+color:#4f6785;
+margin-bottom:35px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 35px;
+background:#4a90e2;
+color:white;
+text-decoration:none;
+border-radius:50px;
+font-weight:600;
+transition:0.3s;
+box-shadow:0 8px 20px rgba(74,144,226,0.3);
+}
+
+.btn:hover{
+transform:translateY(-5px);
+background:#2f6fc0;
+}
+
+.hero-image{
+flex:1;
+min-width:300px;
+text-align:center;
+}
+
+.hero-image img{
+width:100%;
+max-width:450px;
+animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-15px);}
+100%{transform:translateY(0);}
+}
+
+/* SECTION */
+
+section{
+padding:90px 8%;
+}
+
+.title{
+text-align:center;
+margin-bottom:60px;
+}
+
+.title h2{
+font-size:42px;
+margin-bottom:15px;
+color:#1d3557;
+}
+
+.title p{
+color:#5d7290;
+font-size:17px;
+}
+
+/* CARD */
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+padding:35px;
+border-radius:25px;
+box-shadow:0 10px 30px rgba(0,0,0,0.05);
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card h3{
+margin-bottom:15px;
+color:#4a90e2;
+font-size:24px;
+}
+
+.card p{
+line-height:1.9;
+color:#4f6785;
+}
+
+/* TEAM */
+
+.team{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.member{
+background:white;
+padding:35px;
+border-radius:25px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,0.05);
+transition:0.3s;
+}
+
+.member:hover{
+transform:translateY(-8px);
+}
+
+.member img{
+width:90px;
+margin-bottom:15px;
+}
+
+.member h3{
+color:#4a90e2;
+margin-bottom:8px;
+}
+
+.member p{
+color:#5d7290;
+}
+
+/* FLIPBOOK */
+
+.flipbook{
+background:white;
+padding:50px;
+border-radius:30px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,0.05);
+}
+
+.flipbook h3{
+font-size:35px;
+color:#4a90e2;
+margin-bottom:20px;
+}
+
+.flipbook p{
+color:#5d7290;
+margin-bottom:30px;
+line-height:1.8;
+}
+
+iframe{
+width:100%;
+height:600px;
+border:none;
+border-radius:20px;
+margin-top:30px;
+}
+
+/* FOOTER */
+
+footer{
+background:#dbeaff;
+padding:30px;
+text-align:center;
+color:#1d3557;
+margin-top:50px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.hero-text h1{
+font-size:42px;
+}
+
+nav{
+flex-direction:column;
+gap:15px;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+iframe{
+height:400px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo">
+STATISTIKA SMA
+</div>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#materi">Materi</a></li>
+<li><a href="#modul">Modul</a></li>
+<li><a href="#kelompok">Kelompok</a></li>
+<li><a href="#flipbook">Flipbook</a></li>
+</ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="circle1"></div>
+<div class="circle2"></div>
+
+<div class="hero-content">
+
+<div class="hero-text">
+
+<h1>
+Digitalisasi Pembelajaran
+<span>Statistika SMA</span>
+</h1>
+
+<p>
+Website pembelajaran matematika materi statistika SMA
+yang dibuat untuk memenuhi tugas mata kuliah
+Digitalisasi Pembelajaran Program Studi Pendidikan Matematika.
+Website ini berisi materi statistika, modul pembelajaran,
+dan flipbook interaktif untuk membantu peserta didik belajar
+dengan lebih menarik dan modern.
+</p>
+
+<a href="#flipbook" class="btn">
+Mulai Belajar
+</a>
+
+</div>
+
+<div class="hero-image">
+
+<img src="https://cdn-icons-png.flaticon.com/512/4149/4149676.png">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- MATERI -->
+
+<section id="materi">
+
+<div class="title">
+<h2>Materi Pembelajaran</h2>
+<p>Ukuran Pemusatan Data Statistika</p>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>Mean</h3>
+<p>
+Mean atau rata-rata merupakan jumlah seluruh data
+dibagi banyaknya data.
+Mean digunakan untuk mengetahui nilai rata-rata
+suatu kumpulan data.
+</p>
+</div>
+
+<div class="card">
+<h3>Median</h3>
+<p>
+Median adalah nilai tengah dari data yang telah diurutkan.
+Median digunakan untuk mengetahui titik tengah
+dari suatu kumpulan data.
+</p>
+</div>
+
+<div class="card">
+<h3>Modus</h3>
+<p>
+Modus merupakan nilai yang paling sering muncul
+dalam suatu kumpulan data.
+Modus membantu menentukan data dominan.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- MODUL -->
+
+<section id="modul">
+
+<div class="title">
+<h2>Modul Pembelajaran</h2>
+<p>Kapita Selekta Matematika SMA</p>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>Model Pembelajaran</h3>
+<p>
+Model pembelajaran menggunakan Problem Based Learning (PBL)
+dengan metode diskusi, presentasi,
+dan pemecahan masalah.
+</p>
+</div>
+
+<div class="card">
+<h3>Target Peserta Didik</h3>
+<p>
+Peserta didik kelas XI SMA
+dengan kemampuan belajar yang beragam
+melalui kegiatan kolaboratif.
+</p>
+</div>
+
+<div class="card">
+<h3>Asesmen</h3>
+<p>
+Menggunakan asesmen diagnostik,
+formatif, dan sumatif
+untuk mengukur pemahaman peserta didik.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- KELOMPOK -->
+
+<section id="kelompok">
+
+<div class="title">
+<h2>Kelompok</h2>
+<p>Pendidikan Matematika</p>
+</div>
+
+<div class="team">
+
+<div class="member">
+<img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+<h3>Bagus Syahid Maulana</h3>
+<p>24041003</p>
+</div>
+
+<div class="member">
+<img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png">
+<h3>Devi Alya Lufiana P</h3>
+<p>24041003</p>
+</div>
+
+<div class="member">
+<img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+<h3>Diana Amalia Kusuma</h3>
+<p>24041004</p>
+</div>
+
+<div class="member">
+<img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png">
+<h3>Melda Monika Lestari</h3>
+<p>24041008</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- FLIPBOOK -->
+
+<section id="flipbook">
+
+<div class="flipbook">
+
+<h3>Flipbook Statistika</h3>
+
+<p>
+Klik atau baca langsung flipbook interaktif materi statistika
+di bawah ini.
+</p>
+
+<a href="https://heyzine.com/flip-book/afe82c029f.html"
+target="_blank"
+class="btn">
+Buka Flipbook
+</a>
+
+<iframe
+src="https://heyzine.com/flip-book/afe82c029f.html">
+</iframe>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 Digitalisasi Pembelajaran Matematika - Statistika SMA
+</p>
+
+</footer>
+
+</body>
+</html>
