@@ -3,582 +3,437 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Digitalisasi Pembelajaran Statistika SMA</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
 }
 
 body{
-background:linear-gradient(to bottom,#eaf4ff,#f7fbff);
-overflow-x:hidden;
-color:#1d3557;
+    background:linear-gradient(to bottom,#edf6ff,#ffffff);
+    color:#1d3557;
+    overflow-x:hidden;
 }
 
 /* NAVBAR */
-
 nav{
-position:sticky;
-top:0;
-z-index:1000;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 8%;
-background:rgba(255,255,255,0.95);
-backdrop-filter:blur(10px);
-box-shadow:0 5px 20px rgba(0,0,0,0.05);
+    position:sticky;
+    top:0;
+    z-index:1000;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    background:rgba(255,255,255,0.9);
+    backdrop-filter:blur(10px);
+    box-shadow:0 5px 20px rgba(0,0,0,0.05);
 }
 
 .logo{
-font-size:28px;
-font-weight:700;
-color:#4a90e2;
+    font-size:28px;
+    font-weight:700;
+    color:#4a90e2;
 }
 
 nav ul{
-display:flex;
-list-style:none;
-gap:25px;
+    display:flex;
+    gap:25px;
+    list-style:none;
 }
 
 nav ul li a{
-text-decoration:none;
-color:#1d3557;
-font-weight:500;
-transition:0.3s;
+    text-decoration:none;
+    color:#1d3557;
+    font-weight:500;
+    transition:0.3s;
 }
 
 nav ul li a:hover{
-color:#4a90e2;
+    color:#4a90e2;
 }
 
 /* HERO */
-
 .hero{
-min-height:100vh;
-padding:100px 8%;
-display:flex;
-align-items:center;
-justify-content:center;
-position:relative;
-overflow:hidden;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:100px 8%;
+    position:relative;
 }
 
-.bg1,.bg2,.bg3{
-position:absolute;
-border-radius:50%;
-filter:blur(10px);
+.bg1,.bg2{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(20px);
 }
 
 .bg1{
-width:500px;
-height:500px;
-background:#b8dbff;
-top:-150px;
-right:-120px;
-opacity:0.5;
+    width:350px;
+    height:350px;
+    background:#b7dbff;
+    top:-100px;
+    right:-100px;
+    opacity:0.5;
 }
 
 .bg2{
-width:300px;
-height:300px;
-background:#d5ebff;
-bottom:-100px;
-left:-100px;
-opacity:0.6;
-}
-
-.bg3{
-width:200px;
-height:200px;
-background:#8cc6ff;
-top:50%;
-left:45%;
-opacity:0.2;
+    width:250px;
+    height:250px;
+    background:#d8ecff;
+    bottom:-80px;
+    left:-80px;
+    opacity:0.6;
 }
 
 .hero-content{
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:60px;
-flex-wrap:wrap;
-position:relative;
-z-index:2;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:60px;
+    flex-wrap:wrap;
+    z-index:2;
 }
 
 .hero-text{
-flex:1;
-min-width:320px;
+    flex:1;
+    min-width:320px;
 }
 
 .hero-text h1{
-font-size:65px;
-line-height:1.2;
-margin-bottom:20px;
+    font-size:60px;
+    line-height:1.2;
+    margin-bottom:20px;
 }
 
 .hero-text span{
-color:#4a90e2;
+    color:#4a90e2;
 }
 
 .hero-text p{
-font-size:18px;
-line-height:2;
-color:#4f6785;
-margin-bottom:30px;
+    font-size:18px;
+    line-height:1.9;
+    color:#5b6f8a;
+    margin-bottom:25px;
 }
 
 .info-box{
-background:white;
-padding:20px;
-border-radius:20px;
-margin-bottom:25px;
-box-shadow:0 10px 30px rgba(0,0,0,0.05);
+    background:white;
+    padding:22px;
+    border-radius:25px;
+    margin-bottom:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.05);
 }
 
 .btn{
-display:inline-block;
-padding:15px 35px;
-background:#4a90e2;
-color:white;
-text-decoration:none;
-border-radius:50px;
-font-weight:600;
-transition:0.3s;
-box-shadow:0 10px 25px rgba(74,144,226,0.3);
+    display:inline-block;
+    padding:15px 35px;
+    background:#4a90e2;
+    color:white;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:600;
+    transition:0.3s;
 }
 
 .btn:hover{
-transform:translateY(-5px);
-background:#2f6fc0;
+    background:#2f6fc0;
+    transform:translateY(-5px);
 }
 
 .hero-image{
-flex:1;
-text-align:center;
+    flex:1;
+    text-align:center;
 }
 
 .hero-image img{
-width:100%;
-max-width:520px;
-animation:float 4s ease-in-out infinite;
+    width:100%;
+    max-width:500px;
+    animation:float 4s ease-in-out infinite;
 }
 
 @keyframes float{
-0%{transform:translateY(0px);}
-50%{transform:translateY(-15px);}
-100%{transform:translateY(0px);}
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-15px);}
+    100%{transform:translateY(0);}
 }
 
 /* SECTION */
-
 section{
-padding:90px 8%;
+    padding:90px 8%;
 }
 
 .title{
-text-align:center;
-margin-bottom:60px;
+    text-align:center;
+    margin-bottom:60px;
 }
 
 .title h2{
-font-size:45px;
-margin-bottom:15px;
+    font-size:42px;
+    margin-bottom:15px;
 }
 
 .title p{
-color:#5d7290;
-font-size:17px;
+    color:#6b7d95;
 }
 
 /* CARD */
-
 .cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:35px;
 }
 
 .card{
-background:white;
-padding:35px;
-border-radius:30px;
-box-shadow:0 10px 30px rgba(0,0,0,0.05);
-transition:0.4s;
+    background:white;
+    padding:35px;
+    border-radius:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.05);
+    transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-12px);
+    transform:translateY(-10px);
 }
 
 .card h3{
-color:#4a90e2;
-margin-bottom:15px;
-font-size:24px;
+    color:#4a90e2;
+    margin-bottom:18px;
+    font-size:25px;
 }
 
 .card p{
-line-height:1.9;
-color:#4f6785;
+    line-height:2;
+    color:#5b6f8a;
 }
 
 /* GALLERY */
-
 .gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:30px;
 }
 
-.stat-card{
-background:white;
-padding:30px;
-border-radius:30px;
-text-align:center;
-box-shadow:0 10px 30px rgba(74,144,226,0.12);
-transition:0.4s;
+.gallery img{
+    width:100%;
+    border-radius:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    transition:0.4s;
 }
 
-.stat-card:hover{
-transform:translateY(-10px) scale(1.03);
-background:#dceeff;
-}
-
-.stat-card img{
-width:90px;
-margin-bottom:20px;
-animation:float 4s ease-in-out infinite;
-}
-
-.stat-card h3{
-color:#4a90e2;
-font-size:18px;
+.gallery img:hover{
+    transform:scale(1.03);
 }
 
 /* TEAM */
-
 .team{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:30px;
 }
 
 .member{
-background:white;
-padding:35px;
-border-radius:30px;
-text-align:center;
-box-shadow:0 10px 30px rgba(0,0,0,0.05);
-transition:0.3s;
+    background:white;
+    padding:35px;
+    border-radius:30px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.05);
+    transition:0.3s;
 }
 
 .member:hover{
-transform:translateY(-10px);
+    transform:translateY(-10px);
 }
 
 .member img{
-width:100px;
-margin-bottom:15px;
+    width:95px;
+    margin-bottom:15px;
 }
 
 .member h3{
-color:#4a90e2;
-margin-bottom:10px;
+    color:#4a90e2;
+    margin-bottom:10px;
 }
 
 .member p{
-color:#5d7290;
+    color:#5b6f8a;
 }
 
 /* FLIPBOOK */
-
 .flipbook{
-background:white;
-padding:50px;
-border-radius:35px;
-text-align:center;
-box-shadow:0 10px 30px rgba(0,0,0,0.05);
+    background:white;
+    padding:50px;
+    border-radius:35px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.05);
 }
 
 .flipbook h3{
-font-size:38px;
-margin-bottom:20px;
-color:#4a90e2;
+    font-size:38px;
+    color:#4a90e2;
+    margin-bottom:20px;
 }
 
 .flipbook p{
-line-height:1.9;
-color:#5d7290;
-margin-bottom:30px;
+    color:#5b6f8a;
+    line-height:2;
+    margin-bottom:30px;
 }
 
 iframe{
-width:100%;
-height:700px;
-border:none;
-border-radius:25px;
-margin-top:35px;
+    width:100%;
+    height:700px;
+    border:none;
+    border-radius:25px;
+    margin-top:35px;
 }
 
 /* FOOTER */
-
 footer{
-background:#dceeff;
-padding:35px;
-text-align:center;
-margin-top:50px;
+    background:#dceeff;
+    padding:35px;
+    text-align:center;
+    margin-top:50px;
 }
 
 /* RESPONSIVE */
-
 @media(max-width:768px){
 
-.hero-text h1{
-font-size:42px;
-}
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
 
-nav{
-flex-direction:column;
-gap:15px;
-}
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
 
-nav ul{
-flex-wrap:wrap;
-justify-content:center;
-}
+    .hero-text h1{
+        font-size:42px;
+    }
 
-iframe{
-height:400px;
+    iframe{
+        height:400px;
+    }
 }
-
-}
-
 </style>
 </head>
 
 <body>
 
 <!-- NAVBAR -->
-
 <nav>
+    <div class="logo">STATISTIKA SMA</div>
 
-<div class="logo">
-STATISTIKA SMA
-</div>
-
-<ul>
-<li><a href="#home">Home</a></li>
-<li><a href="#materi">Materi</a></li>
-<li><a href="#gallery">Gallery</a></li>
-<li><a href="#kelompok">Kelompok</a></li>
-<li><a href="#flipbook">Flipbook</a></li>
-</ul>
-
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#materi">Materi</a></li>
+        <li><a href="#gallery">Galeri</a></li>
+        <li><a href="#kelompok">Kelompok</a></li>
+        <li><a href="#flipbook">Flipbook</a></li>
+    </ul>
 </nav>
 
 <!-- HERO -->
-
 <section class="hero" id="home">
 
 <div class="bg1"></div>
 <div class="bg2"></div>
-<div class="bg3"></div>
 
 <div class="hero-content">
 
 <div class="hero-text">
-
 <h1>
 Digitalisasi Pembelajaran
 <span>Statistika SMA</span>
 </h1>
 
 <div class="info-box">
-
 <p>
 Disusun untuk memenuhi tugas mata kuliah
-<b>Digitalisasi Pembelajaran</b>
-<br><br>
-Dosen Pengampu:
-<b>Ibu Lina Rumiati, M.Pd</b>
+<b>Digitalisasi Pembelajaran</b><br>
+Dosen Pengampu: <b>Ibu Lina Rumiati, M.Pd</b>
 </p>
-
 </div>
 
 <p>
-Website pembelajaran matematika berbasis digital
-dengan materi statistika SMA yang meliputi ukuran pemusatan data,
-ukuran penyebaran data, tabel distribusi frekuensi,
-diagram statistika, dan penyajian data interaktif melalui flipbook.
+Website pembelajaran matematika berbasis digital yang membahas materi statistika SMA secara interaktif dan menarik melalui media visual serta flipbook digital.
 </p>
 
-<a href="#flipbook" class="btn">
-Mulai Belajar
-</a>
-
+<a href="#flipbook" class="btn">Mulai Belajar</a>
 </div>
 
 <div class="hero-image">
-
 <img src="https://cdn-icons-png.flaticon.com/512/4149/4149676.png">
-
 </div>
 
 </div>
-
 </section>
 
 <!-- MATERI -->
-
 <section id="materi">
 
 <div class="title">
-<h2>Materi Statistika</h2>
-<p>Materi Pembelajaran Matematika SMA</p>
+<h2>Bagian Materi</h2>
+<p>Materi inti statistika SMA</p>
 </div>
 
 <div class="cards">
 
 <div class="card">
-<h3>Mean</h3>
+<h3>Ukuran Pemusatan Data</h3>
 <p>
-Rata-rata hitung seluruh data yang digunakan
-untuk mengetahui nilai rata-rata suatu data.
+Ukuran pemusatan data digunakan untuk mengetahui nilai yang mewakili suatu kumpulan data.
+Materi ini mencakup:
+<b>Mean (rata-rata)</b>,
+<b>Median (nilai tengah)</b>,
+dan <b>Modus (nilai yang paling sering muncul)</b>.
+Konsep ini membantu peserta didik memahami pusat distribusi data dalam statistika.
 </p>
 </div>
 
 <div class="card">
-<h3>Median</h3>
+<h3>Ukuran Penyebaran Data</h3>
 <p>
-Nilai tengah dari kumpulan data
-yang telah diurutkan dari kecil ke besar.
-</p>
-</div>
-
-<div class="card">
-<h3>Modus</h3>
-<p>
-Nilai yang paling sering muncul
-dalam suatu kumpulan data statistika.
-</p>
-</div>
-
-<div class="card">
-<h3>Jangkauan</h3>
-<p>
-Selisih antara data terbesar dan data terkecil
-dalam suatu kumpulan data.
-</p>
-</div>
-
-<div class="card">
-<h3>Kuartil</h3>
-<p>
-Ukuran letak yang membagi data
-menjadi empat bagian sama banyak.
-</p>
-</div>
-
-<div class="card">
-<h3>Simpangan Baku</h3>
-<p>
-Ukuran penyebaran data untuk mengetahui
-seberapa jauh data menyebar dari rata-rata.
+Ukuran penyebaran data digunakan untuk mengetahui seberapa jauh data menyebar dari nilai pusatnya.
+Materi ini mencakup:
+<b>Jangkauan</b>,
+<b>Simpangan Rata-Rata</b>,
+<b>Varians</b>,
+dan <b>Simpangan Baku</b>.
+Konsep ini membantu memahami kestabilan dan variasi data.
 </p>
 </div>
 
 </div>
-
 </section>
 
-<!-- GALLERY -->
-
+<!-- GALERI -->
 <section id="gallery">
 
 <div class="title">
-<h2>Visualisasi Statistika</h2>
-<p>Diagram, Grafik, dan Analisis Data</p>
+<h2>Galeri Pembelajaran</h2>
+<p>Visualisasi digital statistika SMA</p>
 </div>
 
 <div class="gallery">
 
-<div class="stat-card">
-<img src="https://cdn-icons-png.flaticon.com/512/2103/2103633.png">
-<h3>Diagram Batang</h3>
-</div>
+<img src="db43e261-37a9-4310-b3e8-3a10a7bd0985.jpeg" alt="Ilustrasi Statistika 1">
 
-<div class="stat-card">
-<img src="https://cdn-icons-png.flaticon.com/512/2920/2920277.png">
-<h3>Grafik Data</h3>
-</div>
-
-<div class="stat-card">
-<img src="https://cdn-icons-png.flaticon.com/512/3652/3652191.png">
-<h3>Analisis Data</h3>
-</div>
-
-<div class="stat-card">
-<img src="https://cdn-icons-png.flaticon.com/512/3588/3588395.png">
-<h3>Diagram Lingkaran</h3>
-</div>
-
-<div class="stat-card">
-<img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png">
-<h3>Data Statistik</h3>
-</div>
-
-<div class="stat-card">
-<img src="https://cdn-icons-png.flaticon.com/512/2103/2103665.png">
-<h3>Distribusi Data</h3>
-</div>
-
-<div class="stat-card">
-<img src="https://cdn-icons-png.flaticon.com/512/2779/2779775.png">
-<h3>Tabel Frekuensi</h3>
-</div>
-
-<div class="stat-card">
-<img src="https://cdn-icons-png.flaticon.com/512/2942/2942813.png">
-<h3>Perhitungan Mean</h3>
-</div>
-
-<div class="stat-card">
-<img src="https://cdn-icons-png.flaticon.com/512/4290/4290854.png">
-<h3>Median & Modus</h3>
-</div>
-
-<div class="stat-card">
-<img src="https://cdn-icons-png.flaticon.com/512/2620/2620971.png">
-<h3>Simpangan Baku</h3>
-</div>
-
-<div class="stat-card">
-<img src="https://cdn-icons-png.flaticon.com/512/3135/3135706.png">
-<h3>Digital Learning</h3>
-</div>
-
-<div class="stat-card">
-<img src="https://cdn-icons-png.flaticon.com/512/4149/4149647.png">
-<h3>Visualisasi Statistika</h3>
-</div>
+<img src="2b8cc87e-c236-4625-97b7-834586a8eb28.jpeg" alt="Ilustrasi Statistika 2">
 
 </div>
-
 </section>
 
 <!-- KELOMPOK -->
-
 <section id="kelompok">
 
 <div class="title">
@@ -613,11 +468,9 @@ seberapa jauh data menyebar dari rata-rata.
 </div>
 
 </div>
-
 </section>
 
 <!-- FLIPBOOK -->
-
 <section id="flipbook">
 
 <div class="flipbook">
@@ -625,14 +478,10 @@ seberapa jauh data menyebar dari rata-rata.
 <h3>Flipbook Interaktif Statistika</h3>
 
 <p>
-Media pembelajaran digital berbasis flipbook
-untuk membantu peserta didik memahami materi statistika SMA
-secara interaktif dan menarik.
+Media pembelajaran digital berbasis flipbook untuk membantu peserta didik memahami materi statistika SMA secara interaktif dan menarik.
 </p>
 
-<a href="https://heyzine.com/flip-book/6c37d00211.html"
-target="_blank"
-class="btn">
+<a href="https://heyzine.com/flip-book/6c37d00211.html" target="_blank" class="btn">
 Buka Flipbook
 </a>
 
@@ -643,13 +492,10 @@ Buka Flipbook
 </section>
 
 <!-- FOOTER -->
-
 <footer>
-
 <p>
 © 2026 Digitalisasi Pembelajaran Statistika SMA | Pendidikan Matematika
 </p>
-
 </footer>
 
 </body>
